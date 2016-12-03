@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="doL-m1-YHa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -7,6 +7,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3dk-Hx-5Iu">
+            <objects>
+                <navigationController id="doL-m1-YHa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4XJ-bH-2iZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l6V-bx-j5T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsV-ys-Rxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775" y="-111"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -29,17 +45,27 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分割内容" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT9-PM-U66">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2vC-Ov-uR7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="1MY-zB-57I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kT9-PM-U66" secondAttribute="trailing" constant="24" id="8Jv-vR-aAN"/>
                             <constraint firstItem="OUv-1d-bzI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="9E4-xa-sUf"/>
+                            <constraint firstItem="kT9-PM-U66" firstAttribute="top" secondItem="OUv-1d-bzI" secondAttribute="bottom" constant="20" id="cP3-Fd-nXM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OUv-1d-bzI" secondAttribute="bottom" constant="216" id="oDP-Sw-y3d"/>
                             <constraint firstItem="2vC-Ov-uR7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="336" id="vpU-xI-R8a"/>
+                            <constraint firstItem="kT9-PM-U66" firstAttribute="leading" secondItem="OUv-1d-bzI" secondAttribute="leading" id="xkY-Qk-pYP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="690-HN-IaC"/>
                     <connections>
                         <outlet property="calculateSizeLabel" destination="2vC-Ov-uR7" id="1au-Qt-sT7"/>
+                        <outlet property="linesContentLabel" destination="kT9-PM-U66" id="vmN-XA-ZuP"/>
                         <outlet property="realSizeLabel" destination="OUv-1d-bzI" id="Owu-ta-Do4"/>
                     </connections>
                 </viewController>

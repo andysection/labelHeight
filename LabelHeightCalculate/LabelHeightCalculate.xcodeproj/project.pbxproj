@@ -307,6 +307,7 @@
 				84B23D161DF17AE200D1BDDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
